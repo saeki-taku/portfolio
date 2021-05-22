@@ -1,0 +1,108 @@
+.p-hero {
+  height: 100vh;
+  position: relative;
+  backface-visibility: hidden;
+}
+.p-hero__title {
+  position: absolute;
+  top: calc(50% - 45px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: inline-block;
+  @include font-size-rem(32);
+  font-family: "Merienda", cursive;
+  letter-spacing: 2px;
+
+  @include media(md) {
+    top: calc(50% - 90px);
+    // left: calc(50% - 20px);
+    @include font-size-rem(60);
+  }
+}
+
+.p-hero__title > h1 {
+  // text-align: left;
+  // display: inline-block;
+}
+
+.p-slide-in {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.p-slide-in__inner {
+  display: inline-block;
+}
+
+.leftAnimate {
+  opacity: 0;
+}
+
+.slideLeftRight {
+  will-change: transform, animation;
+  @include animation($name: kf-LeftRight, $duration: 1s);
+  opacity: 0;
+}
+
+@keyframes kf-LeftRight {
+  from {
+    transform: translate(-100%, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+.slideRightLeft {
+  will-change: transform, animation;
+  @include animation($name: kf-RightLeft, $duration: 1.2s);
+  opacity: 0;
+}
+
+@keyframes kf-RightLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/*---------------------------------------------------
+hero__icon
+----------------------------------------------------*/
+
+.p-hero__icon {
+  // image-rendering: -webkit-optimize-contrast;
+  position: absolute;
+  top: calc(50% + 50px);
+  left: calc(50% + 20px);
+  transform: translate(-50%, -50%);
+  // z-index: 10;
+  @include media(md) {
+    width: 600px;
+    height: 360px;
+  }
+
+  &.leaf {
+    opacity: 0;
+    @include animation($name: leafDown, $duration: 2s, $delay: .5s);
+  }
+}
+
+@keyframes leafDown {
+  from {
+    opacity: 0;
+    transform: translate(-45%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+

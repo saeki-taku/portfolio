@@ -1,0 +1,58 @@
+.c-scrolldown {
+  position: absolute;
+  bottom: 5px;
+  right: 45px;
+  height: 50px;
+
+  /* 線の描写 */
+  &:after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    /*線の形状*/
+    width: 1px;
+    height: 30px;
+    background: $base-black;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 1.6s ease-in-out 1s infinite;
+    opacity: 0;
+  }
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+@keyframes pathmove{
+	0%{
+		height:0;
+		top:0;
+		opacity: 0;
+	}
+	30%{
+		height:30px;
+		opacity: 1;
+	}
+	100%{
+		height:0;
+		top:50px;
+		opacity: 0;
+	}
+}
+
+.c-scrolldown > span {
+  position: absolute;
+  left: 8px;
+  bottom: 3px;
+  color: $base-black;
+  @include font-size-rem(12);
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+}

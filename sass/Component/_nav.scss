@@ -1,0 +1,90 @@
+// body.fixed {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+// }
+
+.c-nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $base-green;
+  transform: translateX(100%);
+  transition: transform .3s linear;
+  z-index: 200;
+
+  @include media(md) {
+    position: static;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    transform: none;
+    z-index: 0;
+  }
+}
+
+.c-nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  @include media(md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.c-nav__item {
+  @include media(md) {
+    flex-grow: 1;
+  }
+}
+
+.c-nav__link {
+  color: $base-white;
+  font-weight: bold;
+  letter-spacing: 3px;
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+  @include font-size-rem(20);
+
+  @include media(md) {
+    color: $base-black;
+    font-weight: normal;
+    padding: 10px 0;
+    transition: color 0.3s ease-in, border-bottom 0.1s ease-in;
+
+    &:hover {
+      color: $base-green;
+      border-bottom: 2px dashed;
+    }
+  }
+}
+
+// .is-drawerActive .c-nav {
+//   transform: translateX(0);
+//   z-index: 1;
+// }
+.is-drawerActive {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  @include media(md) {
+    position: static;
+  }
+
+  & .c-nav {
+    transform: translateX(0);
+    z-index: 1;
+  }
+}

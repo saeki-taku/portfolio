@@ -1,0 +1,29 @@
+.p-about {
+  padding-bottom: 80px;
+}
+
+.p-about__wrap {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.p-about__face {
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  margin: 2px 15px 0 0;
+}
+.p-about__textBox {
+  flex-shrink: 2;
+}
+
+.p-about__myname {
+  margin-bottom: 12px;
+  @include font-size-rem(24);
+}
+
+.p-about__text {
+  @include font-size-rem(14);
+  line-height: 2;
+  letter-spacing: 2px;
+}

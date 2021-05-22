@@ -1,0 +1,29 @@
+.c-foot-menu__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.c-foot-menu__item:not(:last-of-type) {
+  &::after {
+    content: "/";
+    display: inline-block;
+  }
+}
+
+.c-foot-menu__link {
+  @include font-size-vw(12);
+  padding: 8px 10px;
+  color: $base-black-thin;
+  transition: color 0.3s ease-in, border-bottom 0.2s ease-in;
+
+  @include media(lg) {
+    @include font-size-rem(24);
+    padding: 8px 16px;
+  }
+
+  &:hover {
+    color: $base-green;
+    border-bottom: 2px dashed;
+  }
+}

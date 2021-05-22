@@ -1,0 +1,13 @@
+.p-skill__text {
+  @include font-size-vw(16);
+  text-align: center;
+  line-height: 2;
+
+  @include media(lg) {
+    @include font-size-vw(14);
+  }
+
+  @include media(xl) {
+    @include font-size-rem(40);
+  }
+}

@@ -1,0 +1,19 @@
+//プロジェクト内で使用する色コードを一括管理
+
+//base
+$base-black: rgb(56, 56, 56);
+$base-black-thin: rgba(0, 0, 0, .5);
+$base-green: #38AF77;
+$illust-color: #378c39;
+$base-white: #fff;
+
+//more-button
+$more-button-shadow: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 60%);
+// $more-button-shadow: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+
+// contact
+$contact-bg: #F6EDD9;
+
+// work
+// $work-slidecover: linear-gradient(15deg, #13547aa9 0%, #80d0c7ab 100%);
+$work-slidecover: linear-gradient(to right bottom, #979797d5 0%, rgba(0, 0, 0, 0.8) 100%);

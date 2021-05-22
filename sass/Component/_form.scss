@@ -1,0 +1,49 @@
+.c-contact__form {
+  margin: 0 auto;
+  max-width: 300px;
+
+  @include media(md) {
+    max-width: 450px;
+  }
+}
+
+.c-contact__label {
+  display: block;
+  margin-bottom: 5px;
+}
+.c-contact__label > span {
+  color: $base-black-thin;
+  margin-left: 20px;
+  @include font-size-rem(12);
+}
+
+.c-contact__item > input,
+.c-contact__item > textarea {
+  width: 100%;
+  padding: 10px 4px;
+  margin-bottom: 12px;
+}
+
+.c-contact__item > textarea {
+  margin-bottom: 40px;
+}
+
+.c-contact__submit {
+  display: block;
+  font-weight: 400;
+  margin: 0 auto;
+  width: 150px;
+  height: 40px;
+  border: solid 1px $base-green;
+  box-shadow: 0px 3px 3px 0px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: $base-white;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $base-green;
+    color: $base-white;
+    border: 1px solid $base-white;
+  }
+}

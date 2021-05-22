@@ -1,0 +1,27 @@
+// font-sizeやcolor inputなどを共通化部品に使用
+// @import "_color";
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: inherit;
+}
+
+a,
+button,
+input {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  border: 1px solid;
+  border-radius: 4px;
+}
