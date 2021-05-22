@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*---------------------------------------------------
+ブレークポイント
+----------------------------------------------------*/
+/*---------------------------------------------------
+フォントサイズ
+----------------------------------------------------*/
+/*---------------------------------------------------
+アニメーション テンプレート
+----------------------------------------------------*/
+.p-work-all {
+  padding: 100px 20px 80px; }
+
+.p-work-all__siteTitle {
+  margin-top: 10px;
+  letter-spacing: 2px;
+  font-weight: 500; }
+
+.p-work-detail {
+  padding: 100px 20px 60px;
+  max-width: 960px;
+  margin: 0 auto; }
+
+.p-work-detail__siteimg {
+  width: 100%;
+  height: auto; }
+
+.p-work-detail__title {
+  margin-top: 15px;
+  padding-left: 8px;
+  border-left: 6px solid #38AF77; }
+
+.p-work-detail__link a {
+  display: block;
+  background-color: #38AF77;
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: background-color .2s ease-in; }
+  @media (min-width: 768px) {
+    .p-work-detail__link a {
+      padding: 14px 0; }
+      .p-work-detail__link a:hover {
+        background-color: #fff;
+        border: 1px solid #38AF77;
+        color: #38AF77; } }
+
+.p-work_detail__text {
+  word-break: break-all;
+  margin-top: 12px;
+  font-size: 0.75rem; }
+  @media (min-width: 576px) {
+    .p-work_detail__text {
+      font-size: 1rem; } }
+  .p-work_detail__text span {
+    margin-right: 5px; }
+
+/*# sourceMappingURL=style.css.map */

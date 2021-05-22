@@ -1,0 +1,1 @@
+"use strict";function fadeIn(){$(".fade-in-trigger").each(function(){var i=$(this).offset().top-50,n=$(window).scrollTop();i-$(window).height()<=n&&$(this).addClass("fade-in")})}$(window).scroll(function(){fadeIn()});

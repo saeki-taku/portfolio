@@ -9,13 +9,13 @@ const autoprefixer = require("autoprefixer");
 
 function styles() {
   return (
-    src("./sass/*.scss")
+    src(["./sass/*.scss", "./sass/**/*.scss"])
       .pipe($.sourcemaps.init())
       .pipe($.sass())
       .pipe($.postcss([autoprefixer()]))
       .pipe($.sourcemaps.write(".")) //"."dest先と同じ先に出力させる為
       // .pipe($.postcss([cssnano({ safe: true, autoprefixer: false })]))
-      .pipe(dest("./"))
+      .pipe(dest(["./css/"]))
   );
 }
 

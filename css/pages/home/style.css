@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/*---------------------------------------------------
+ブレークポイント
+----------------------------------------------------*/
+/*---------------------------------------------------
+フォントサイズ
+----------------------------------------------------*/
+/*---------------------------------------------------
+アニメーション テンプレート
+----------------------------------------------------*/
+.p-hero {
+  height: 100vh;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
+
+.p-hero__title {
+  position: absolute;
+  top: calc(50% - 45px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: inline-block;
+  font-size: 2rem;
+  font-family: "Merienda", cursive;
+  letter-spacing: 2px; }
+  @media (min-width: 768px) {
+    .p-hero__title {
+      top: calc(50% - 90px);
+      font-size: 3.75rem; } }
+
+.p-slide-in {
+  overflow: hidden;
+  display: inline-block; }
+
+.p-slide-in__inner {
+  display: inline-block; }
+
+.leftAnimate {
+  opacity: 0; }
+
+.slideLeftRight {
+  will-change: transform, animation;
+  -webkit-animation-name: kf-LeftRight;
+          animation-name: kf-LeftRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0; }
+
+@-webkit-keyframes kf-LeftRight {
+  from {
+    transform: translate(-100%, -50%);
+    opacity: 0; }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1; } }
+
+@keyframes kf-LeftRight {
+  from {
+    transform: translate(-100%, -50%);
+    opacity: 0; }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1; } }
+
+.slideRightLeft {
+  will-change: transform, animation;
+  -webkit-animation-name: kf-RightLeft;
+          animation-name: kf-RightLeft;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0; }
+
+@-webkit-keyframes kf-RightLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@keyframes kf-RightLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+/*---------------------------------------------------
+hero__icon
+----------------------------------------------------*/
+.p-hero__icon {
+  position: absolute;
+  top: calc(50% + 50px);
+  left: calc(50% + 20px);
+  transform: translate(-50%, -50%); }
+  @media (min-width: 768px) {
+    .p-hero__icon {
+      width: 600px;
+      height: 360px; } }
+  .p-hero__icon.leaf {
+    opacity: 0;
+    -webkit-animation-name: leafDown;
+            animation-name: leafDown;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+
+@-webkit-keyframes leafDown {
+  from {
+    opacity: 0;
+    transform: translate(-45%, -60%); }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%); } }
+
+@keyframes leafDown {
+  from {
+    opacity: 0;
+    transform: translate(-45%, -60%); }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%); } }
+
+.p-skill__text {
+  font-size: 4.26667vw;
+  text-align: center;
+  line-height: 2; }
+  @media (min-width: 960px) {
+    .p-skill__text {
+      font-size: 3.73333vw; } }
+  @media (min-width: 1200px) {
+    .p-skill__text {
+      font-size: 2.5rem; } }
+
+.p-about {
+  padding-bottom: 80px; }
+
+.p-about__wrap {
+  width: 90%;
+  display: flex;
+  margin: 0 auto; }
+
+.p-about__face {
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  margin: 2px 15px 0 0; }
+
+.p-about__textBox {
+  flex-shrink: 2; }
+
+.p-about__myname {
+  margin-bottom: 12px;
+  font-size: 1.5rem; }
+
+.p-about__text {
+  font-size: 0.875rem;
+  line-height: 2;
+  letter-spacing: 2px; }
+
+/*# sourceMappingURL=style.css.map */
