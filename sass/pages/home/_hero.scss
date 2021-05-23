@@ -89,13 +89,16 @@ hero__icon
     height: 360px;
   }
 
-  &.leaf {
-    opacity: 0;
-    @include animation($name: leafDown, $duration: 2s, $delay: .5s);
+  &.wind {
+    visibility: hidden;
   }
 }
 
-@keyframes leafDown {
+.leaf-animation {
+  opacity: 0;
+  @include animation($name: kf-leaf-fall, $duration: 2s, $delay: 0.5s);
+}
+@keyframes kf-leaf-fall {
   from {
     opacity: 0;
     transform: translate(-45%, -60%);
@@ -105,4 +108,3 @@ hero__icon
     transform: translate(-50%, -50%);
   }
 }
-

@@ -1,1 +1,38 @@
-"use strict";!function(){$("#js-buttonHamburger").on("click",function(){$("body").toggleClass("is-drawerActive"),"false"==$(this).attr("aria-expanded")?$(this).attr("aria-expanded",!0):$(this).attr("aria-expanded",!1)}),$('#js-page-scroll__head a[href*="#"]').on("click",function(){$(window).width()<=768&&($("body").toggleClass("is-drawerActive"),"true"==$(".c-button").attr("aria-expanded")?$(".c-button").attr("aria-expanded",!1):$(".c-button").attr("aria-expanded",!0))});var a=$(".c-button").attr("aria-expanded");console.log(a)}();
+"use strict";
+
+(function () {
+  $('#js-buttonHamburger').on('click', function () {
+    $('body').toggleClass('is-drawerActive');
+
+    if ($(this).attr('aria-expanded') == 'false') {
+      $(this).attr('aria-expanded', true);
+    } else {
+      $(this).attr('aria-expanded', false);
+    }
+  });
+  $('#js-page-scroll__head a[href*="#"]').on('click', function () {
+    var windowSize = $(window).width();
+    var mdSize = 768;
+
+    if (windowSize <= mdSize) {
+      $('body').toggleClass('is-drawerActive');
+
+      if ($('.c-button').attr('aria-expanded') == 'true') {
+        $('.c-button').attr('aria-expanded', false);
+      } else {
+        $('.c-button').attr('aria-expanded', true);
+      }
+    }
+  });
+  var test = $('.c-button').attr('aria-expanded');
+  console.log(test); // let testclick = function () {
+  //   $('body').toggleClass('is-drawerActive');
+  //   if ($(this).attr('aria-expanded') == 'false') {
+  //     $(this).attr('aria-expanded', true);
+  //   } else {
+  //     $(this).attr('aria-expanded', false);
+  //   }
+  // };
+  // $('#js-buttonHamburger').click(testclick());
+  // $('#js-page-scroll__head a[href*="#"]').click.testclick();
+})();

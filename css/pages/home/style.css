@@ -119,24 +119,27 @@ hero__icon
     .p-hero__icon {
       width: 600px;
       height: 360px; } }
-  .p-hero__icon.leaf {
-    opacity: 0;
-    -webkit-animation-name: leafDown;
-            animation-name: leafDown;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards; }
+  .p-hero__icon.wind {
+    visibility: hidden; }
 
-@-webkit-keyframes leafDown {
+.leaf-animation {
+  opacity: 0;
+  -webkit-animation-name: kf-leaf-fall;
+          animation-name: kf-leaf-fall;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes kf-leaf-fall {
   from {
     opacity: 0;
     transform: translate(-45%, -60%); }
@@ -144,7 +147,7 @@ hero__icon
     opacity: 1;
     transform: translate(-50%, -50%); } }
 
-@keyframes leafDown {
+@keyframes kf-leaf-fall {
   from {
     opacity: 0;
     transform: translate(-45%, -60%); }

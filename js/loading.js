@@ -1,1 +1,9 @@
-"use strict";window.onpageshow=function(o){o.persisted&&window.location.reload()};
+// window.onload = function() {
+//   const spinner = document.getElementById("js-loading");
+//   spinner.classList.add("loaded");
+// };
+window.onpageshow = function (event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+};

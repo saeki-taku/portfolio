@@ -25,7 +25,7 @@ function startServer() {
   //     baseDir: "./_underscore",
   //   }
   // });
-  watch("./sass/*.scss", styles); //第二引数走らせるタスク
+  watch(["./sass/*.scss", "./sass/**/*.scss"], styles); //第二引数走らせるタスク
   // watch("./sass/*.scss").on("change", server.reload);
 }
 

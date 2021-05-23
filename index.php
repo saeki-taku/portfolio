@@ -41,11 +41,11 @@
 			</div>
 			<div class="p-hero__icon-wind">
 				<!-- <jsよりleafのimgが入る> -->
-				<!-- <img class="p-hero__icon wind" src="./images/hero-flow.png" alt="top-icon" width="300" height="180" /> -->
+				<img class="p-hero__icon wind" src="<?= get_template_directory_uri(); ?>/images/hero-flow.png" alt="top-icon" width="300" height="180" />
 			</div>
 			<div class="p-hero__icon-leaf">
 				<!-- <jsよりleafのimgが入る> -->
-				<!-- <img class="p-hero__icon leaf" src="./images/leaf.png" alt="top-icon" width="300" height="180" /> -->
+				<img class="p-hero__icon leaf" src="<?= get_template_directory_uri(); ?>/images/leaf.png" alt="top-icon" width="300" height="180" />
 			</div>
 			<div class="c-scrolldown">
 				<span>scroll</span>
@@ -55,21 +55,26 @@
 			<!-- work -->
 			<section class="l-common c-work" id="js-work__anchor">
 				<h2 class="c-section__title fade-in-trigger">WORKS</h2>
-				<img class="c-section__icon" src="./images/work-color.png" alt="work-icon" width="250" height="250" />
+				<img class="c-section__icon" src="<?= get_template_directory_uri(); ?>/images/work-color.png" alt="work-icon" width="250" height="250" />
 				<ul class="c-work__list">
+					<!-- wordpress側投稿する為srcsetは一旦設定無し -->
 					<li class="c-work__item">
 						<a class="c-work__link c-work__slidebg" href="">
-							<img src="./images/work01-600.jpg" srcset="./images/work01-300.jpg 1x, ./images/work01-600.jpg 2x, ./images/work01-900.jpg 3x" alt="制作の画像" width="600" height="400" />
+							<img src="<?= get_template_directory_uri(); ?>/images/work01-600.jpg" alt="制作の画像" width="600" height="400" />
+						</a>
+						<!-- wordpress側投稿する為srcsetは一旦設定無し(下記) -->
+						<!-- <a class="c-work__link c-work__slidebg" href="">
+							<img src="<?= get_template_directory_uri(); ?>/images/work01-600.jpg" srcset="<?= get_template_directory_uri(); ?>/images/work01-300.jpg 1x, <?= get_template_directory_uri(); ?>/images/work01-600.jpg 2x, <?= get_template_directory_uri(); ?>/images/work01-900.jpg 3x" alt="制作の画像" width="600" height="400" />
+						</a> -->
+					</li>
+					<li class="c-work__item">
+						<a class="c-work__link c-work__slidebg" href="">
+							<img src="<?= get_template_directory_uri(); ?>/images/work02-300.jpg" alt="制作の画像" width="600" height="400" />
 						</a>
 					</li>
 					<li class="c-work__item">
 						<a class="c-work__link c-work__slidebg" href="">
-							<img src="" srcset="./images/work02-300.jpg 1x, ./images/work02-600.jpg 2x, ./images/work02-900.jpg 3x" alt="制作の画像" width="600" height="400" />
-						</a>
-					</li>
-					<li class="c-work__item">
-						<a class="c-work__link c-work__slidebg" href="">
-							<img src="" srcset="./images/work02-300.jpg 1x, ./images/work02-600.jpg 2x, ./images/work02-900.jpg 3x" alt="制作の画像" width="600" height="400" />
+							<img src="<?= get_template_directory_uri(); ?>/images/work02-300.jpg" alt="制作の画像" width="600" height="400" />
 						</a>
 					</li>
 				</ul>
@@ -78,7 +83,7 @@
 			<!-- skill -->
 			<section class="l-common p-skill" id="js-skill__anchor">
 				<h2 class="c-section__title fade-in-trigger">SKILL</h2>
-				<img class="c-section__icon c-skill__icon" src="./images/skill-color.png" alt="skill-icon" width="100" height="127" />
+				<img class="c-section__icon c-skill__icon" src="<?= get_template_directory_uri(); ?>/images/skill-color.png" alt="skill-icon" width="100" height="127" />
 				<p class="p-skill__text">
 					HTML / CSS / Javascript / JQuery / <br />
 					Sass / Webpack / Wordpress / github / <br />
@@ -88,10 +93,10 @@
 			<!-- about -->
 			<section class="l-common p-about" id="js-about__anchor">
 				<h2 class="c-section__title fade-in-trigger">ABOUT</h2>
-				<img class="c-section__icon" src="./images/about-color.png" alt="about-icon" width="250" height="250" />
+				<img class="c-section__icon" src="<?= get_template_directory_uri(); ?>/images/about-color.png" alt="about-icon" width="250" height="250" />
 				<div class="p-about__wrap">
 					<!-- <div class="p-about__inner"> -->
-					<img class="p-about__face" src="./images/face.jpg" alt="佐伯の顔写真" width="90" height="90" />
+					<img class="p-about__face" src="<?= get_template_directory_uri(); ?>/images/face.jpg" alt="佐伯の顔写真" width="90" height="90" />
 					<div class="p-about__textBox">
 						<h3 class="p-about__myname">saeki takuya</h3>
 						<p class="p-about__text"><label for="text">在住:</label>東京都</p>
@@ -107,7 +112,7 @@
 			<!-- contact -->
 			<section class="l-contact" id="js-contact__anchor">
 				<h2 class="c-section__title fade-in-trigger">CONTACT</h2>
-				<img class="c-section__icon c-contact__icon" src="./images/contact-color.png" alt="contact-icon" width="250" height="250" />
+				<img class="c-section__icon c-contact__icon" src="<?= get_template_directory_uri(); ?>/images/contact-color.png" alt="contact-icon" width="250" height="250" />
 				<form class="c-contact__form" action="">
 					<div class="c-contact__item">
 						<label class="c-contact__label" for="name">お名前<span>例)山田　太郎</span></label><input type="text" />

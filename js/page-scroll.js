@@ -1,1 +1,25 @@
-"use strict";var pagescroll=function(){var l=$(this).attr("href"),o=$(l).offset().top;return $("body, html").animate({scrollTop:o},500),!1};$('#js-page-scroll__head a[href*="#"]').on("click",pagescroll),$('#js-page-scroll__foot a[href*="#"]').on("click",pagescroll);
+"use strict";
+
+// $('#js-page-scroll__head a[href*="#"]').click(function() {
+//   const elementHash = $(this).attr("href");
+//   const pos = $(elementHash).offset().top;
+//   $("body, html").animate({ scrollTop: pos }, 500);
+//   return false;
+// });
+// $('#js-page-scroll__foot a[href*="#"]').click(function() {
+//   const elementHash = $(this).attr("href");
+//   const pos = $(elementHash).offset().top;
+//   $("body, html").animate({ scrollTop: pos }, 500);
+//   return false;
+// });
+var pagescroll = function pagescroll() {
+  var elementHash = $(this).attr('href');
+  var pos = $(elementHash).offset().top;
+  $('body, html').animate({
+    scrollTop: pos
+  }, 500);
+  return false;
+};
+
+$('#js-page-scroll__head a[href*="#"]').on('click', pagescroll);
+$('#js-page-scroll__foot a[href*="#"]').on('click', pagescroll);

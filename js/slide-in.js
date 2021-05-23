@@ -1,1 +1,23 @@
-"use strict";$(window).on("load",function(){var i=$("#js-loading"),n=$(".p-slide-in"),o=$(".p-slide-in__inner"),e=$(".p-hero__icon-wind"),d=$(".p-hero__icon-leaf");$.when($(i).addClass("loaded")).done(function(){$(n).addClass("slideLeftRight"),$(o).addClass("slideRightLeft")}).done(function(){$(e).html(' <img class="p-hero__icon wind" src="./images/hero-flow.png" alt="top-icon" width="300" height="180" />')}).done(function(){$(d).html(' <img class="p-hero__icon leaf" src="./images/leaf.png" alt="top-icon" width="300" height="180" />')}).fail(function(){alert("読み込みに失敗しました。再読み込みを実行してください")})});
+$(window).on("load", () => {
+  // const spinner = document.getElementById("js-loading");
+  const spinner = $("#js-loading");
+  const title = $(".p-slide-in");
+  const titleInner = $(".p-slide-in__inner");
+  const wind = $(".wind");
+  const leaf = $(".leaf");
+
+  $.when($(spinner).addClass("loaded"))
+    .done(() => {
+      $(title).addClass("slideLeftRight");
+      $(titleInner).addClass("slideRightLeft");
+    })
+    .done(() => {
+      $(wind).css("visibility", "visible");
+    })
+    .done(() => {
+      $(leaf).addClass("leaf-animation");
+    })
+    .fail(() => {
+      alert("読み込みに失敗しました。再読み込みを実行してください (- _ -)");
+    });
+});
