@@ -107,7 +107,8 @@
       <img class="c-section__icon c-contact__icon" src="<?= get_template_directory_uri(); ?>/images/contact-color.png" alt="contact-icon" width="250" height="250" />
       <div class="c-contact__form">
 
-        <?= do_shortcode('[mwform_formkey key="5"]'); ?>
+				<?= do_shortcode('[mwform_formkey key="5"]'); ?>
+
 
         <div>
     </section>

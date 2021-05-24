@@ -17,18 +17,24 @@
   @include font-size-rem(12);
 }
 
+.c-contact__item {
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+}
+
 .c-contact__item > input,
 .c-contact__item > textarea {
   width: 100%;
   padding: 10px 4px;
-  margin-bottom: 12px;
 }
 
 .c-contact__item > textarea {
-  margin-bottom: 40px;
 }
 
-.c-contact__submit {
+.c-contact__btn {
   display: block;
   font-weight: 400;
   margin: 0 auto;
@@ -45,5 +51,41 @@
     background-color: $base-green;
     color: $base-white;
     border: 1px solid $base-white;
+  }
+}
+
+
+
+// ==========================================================================
+// MW WP Form
+// ==========================================================================
+
+.error {
+  font-weight: bold;
+  color: $contact-error;
+}
+
+.c-contact__label {
+  &.comfirm__label {
+    border-bottom: 1px dashed $base-black-thin;
+  }
+}
+
+.example {
+  display: none;
+}
+
+.c-contact__btn-back {
+  padding: 8px 0;
+  width: 150px;
+  margin: 40px auto 0;
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: $base-black-thin;
+  text-decoration: underline;
+
+  &:hover {
+    color: $contact-link-hover;
   }
 }

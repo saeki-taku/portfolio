@@ -397,6 +397,8 @@ template {
     @media (min-width: 960px) {
       .l-contact::after {
         border-width: 0 0 120px 120px; } }
+  .l-contact.comfirm {
+    background-color: #fff; }
 
 .c-more__button {
   margin: 50px auto 0;
@@ -677,16 +679,17 @@ template {
   margin-left: 20px;
   font-size: 0.75rem; }
 
+.c-contact__item {
+  margin-bottom: 20px; }
+  .c-contact__item:last-of-type {
+    margin-bottom: 40px; }
+
 .c-contact__item > input,
 .c-contact__item > textarea {
   width: 100%;
-  padding: 10px 4px;
-  margin-bottom: 12px; }
+  padding: 10px 4px; }
 
-.c-contact__item > textarea {
-  margin-bottom: 40px; }
-
-.c-contact__submit {
+.c-contact__btn {
   display: block;
   font-weight: 400;
   margin: 0 auto;
@@ -698,10 +701,32 @@ template {
   border-bottom-right-radius: 30px;
   background-color: #fff;
   transition: background-color 0.2s ease; }
-  .c-contact__submit:hover {
+  .c-contact__btn:hover {
     background-color: #38AF77;
     color: #fff;
     border: 1px solid #fff; }
+
+.error {
+  font-weight: bold;
+  color: red; }
+
+.c-contact__label.comfirm__label {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.5); }
+
+.example {
+  display: none; }
+
+.c-contact__btn-back {
+  padding: 8px 0;
+  width: 150px;
+  margin: 40px auto 0;
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: underline; }
+  .c-contact__btn-back:hover {
+    color: #178fff; }
 
 .c-scrolldown {
   position: absolute;
