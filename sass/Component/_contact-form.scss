@@ -54,38 +54,3 @@
   }
 }
 
-
-
-// ==========================================================================
-// MW WP Form
-// ==========================================================================
-
-.error {
-  font-weight: bold;
-  color: $contact-error;
-}
-
-.c-contact__label {
-  &.comfirm__label {
-    border-bottom: 1px dashed $base-black-thin;
-  }
-}
-
-.example {
-  display: none;
-}
-
-.c-contact__btn-back {
-  padding: 8px 0;
-  width: 150px;
-  margin: 40px auto 0;
-  display: block;
-  background-color: transparent;
-  border: none;
-  color: $base-black-thin;
-  text-decoration: underline;
-
-  &:hover {
-    color: $contact-link-hover;
-  }
-}

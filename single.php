@@ -1,40 +1,20 @@
-<?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package underscore_template
- */
+<?php get_header(); ?>
+<div class="l-wrapper">
 
-get_header();
-?>
+	<?php get_template_part('inc/header') ?>
 
-	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'underscore_template' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'underscore_template' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+	<main class="main">
+		<article class="l-common p-work-detail">
+			<?php $title = get_the_title();?>
+			<?php  the_post_thumbnail(array(1200, 800) ,array('alt' => $title, 'class' => 'p-work-detail__siteimg')); ?>
+			<h2 class="p-work-detail__title"><?= $title?></h2>
+			<p class="p-work-detail__link"><a href="">サイトの閲覧はこちらから</a></p>
+			<?php the_content(); ?>
+			<p class="p-work_detail__text"><span>制作時期:</span>2020/04</p>
+			<p class="p-work_detail__text"><span>使用言語・ツール:</span>HTML/CSS/JQuery</p>
+			<p class="p-work_detail__text">ここに制作に当たっての要望や過程・コメントを記載</p>
+		</article>
+	</main>
+	<?php get_template_part('inc/footer'); ?>
+</div>
+<?php get_footer(); ?>

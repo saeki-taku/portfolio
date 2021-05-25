@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/*---------------------------------------------------
+ブレークポイント
+----------------------------------------------------*/
+/*---------------------------------------------------
+フォントサイズ
+----------------------------------------------------*/
+/*---------------------------------------------------
+アニメーション テンプレート
+----------------------------------------------------*/
+.error {
+  font-weight: bold;
+  color: red; }
+
+.c-contact__label.comfirm__label {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.5); }
+
+.example {
+  display: none; }
+
+.p-contact__btn-back {
+  padding: 8px 0;
+  width: 150px;
+  margin: 40px auto 0;
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: underline; }
+  .p-contact__btn-back:hover {
+    color: #178fff; }
+
+/*# sourceMappingURL=style.css.map */

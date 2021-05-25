@@ -8,26 +8,9 @@
 </div>
 <div class="l-wrapper">
   <section class="p-hero" id="js-top__anchor">
-    <header class="l-header">
-      <!--humburger menu-->
-      <button type="button" id="js-buttonHamburger" class="c-button c-hamburger" aria-controls="global-nav" aria-expanded="false">
-        <span class="c-hamburger__line">
-          <span class="c-visuallyHidden">
-            メニューを開閉する
-          </span>
-        </span>
-      </button>
 
-      <nav class="c-nav">
-        <ul class="c-nav__list" id="js-page-scroll__head">
-          <li class="c-nav__item"><a href="" class="c-nav__link">TOP</a></li>
-          <li class="c-nav__item"><a href="#js-work__anchor" class="c-nav__link">WORKS</a></li>
-          <li class="c-nav__item"><a href="#js-skill__anchor" class="c-nav__link">SKILL</a></li>
-          <li class="c-nav__item"><a href="#js-about__anchor" class="c-nav__link">ABOUT</a></li>
-          <li class="c-nav__item"><a href="#js-contact__anchor" class="c-nav__link">CONTACT</a></li>
-        </ul>
-      </nav>
-    </header>
+    <?php get_template_part('inc/header') ?>
+
     <div class="p-hero__title p-slide-in">
       <h1 class="p-slide-in__inner">saeki's<br /><span>portfolio</span></h1>
     </div>
@@ -50,27 +33,21 @@
       <img class="c-section__icon" src="<?= get_template_directory_uri(); ?>/images/work-color.png" alt="work-icon" width="250" height="250" />
       <ul class="c-work__list">
         <!-- wordpress側投稿する為srcsetは一旦設定無し -->
-        <li class="c-work__item">
-          <a class="c-work__link c-work__slidebg" href="">
-            <img src="<?= get_template_directory_uri(); ?>/images/work01-600.jpg" alt="制作の画像" width="600" height="400" />
-          </a>
-          <!-- wordpress側投稿する為srcsetは一旦設定無し(下記) -->
-          <!-- <a class="c-work__link c-work__slidebg" href="">
-							<img src="<?= get_template_directory_uri(); ?>/images/work01-600.jpg" srcset="<?= get_template_directory_uri(); ?>/images/work01-300.jpg 1x, <?= get_template_directory_uri(); ?>/images/work01-600.jpg 2x, <?= get_template_directory_uri(); ?>/images/work01-900.jpg 3x" alt="制作の画像" width="600" height="400" />
-						</a> -->
-        </li>
-        <li class="c-work__item">
-          <a class="c-work__link c-work__slidebg" href="">
-            <img src="<?= get_template_directory_uri(); ?>/images/work02-300.jpg" alt="制作の画像" width="600" height="400" />
-          </a>
-        </li>
-        <li class="c-work__item">
-          <a class="c-work__link c-work__slidebg" href="">
-            <img src="<?= get_template_directory_uri(); ?>/images/work02-300.jpg" alt="制作の画像" width="600" height="400" />
-          </a>
-        </li>
+        <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
+            <?php $ID = get_the_ID(); ?>
+            <?php $title = get_the_title($ID); ?>
+            <li class="c-work__item">
+              <a class="c-work__link c-work__slidebg" href="<?php the_permalink(); ?>">
+                <?php the_post_thumbnail(array(600, 400), array('alt' => $title)); ?>
+              </a>
+            </li>
+          <?php endwhile; ?>
+        <?php else : ?>
+          <p>作品が見つかりません</p>
+        <?php endif; ?>
       </ul>
-      <a class="c-more__button" href="./work_all.html"><span class="c-arrow"></span>もっと見る？</a>
+      <a class="c-more__button" href="<?= get_category_link(2); ?>"><span class="c-arrow"></span>もっと見る？</a>
     </section>
     <!-- skill -->
     <section class="l-common p-skill" id="js-skill__anchor">
@@ -107,7 +84,7 @@
       <img class="c-section__icon c-contact__icon" src="<?= get_template_directory_uri(); ?>/images/contact-color.png" alt="contact-icon" width="250" height="250" />
       <div class="c-contact__form">
 
-				<?= do_shortcode('[mwform_formkey key="5"]'); ?>
+        <?= do_shortcode('[mwform_formkey key="5"]'); ?>
 
 
         <div>

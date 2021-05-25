@@ -10,6 +10,9 @@
   <!-- ページによって読み込ませるcssを変える(スラッグを使用するか) ↓↓↓↓ -->
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/pages/work/style.css" />
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/pages/home/style.css" />
+  <?php if(is_page('comfirm')):?>
+  <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/pages/contact-comfirm/style.css" />
+  <?php endif ;?>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Neucha&family=Poiret+One&display=swap" rel="stylesheet" />
   <script src="<?= get_template_directory_uri(); ?>/js/jquery-3.6.0min.js" defer></script>
