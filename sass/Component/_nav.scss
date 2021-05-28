@@ -1,8 +1,27 @@
-// body.fixed {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-// }
+.c-nav__logo-link {
+  width: 95px;
+  height: auto;
+  @include media(md) {
+    width: 200px;
+    display: block;
+    margin: 0 auto 30px;
+    transform: translateX(-15px);
+    @include media(xxl) {
+      width: 350px;
+      transform: translateX(0);
+    }
+  }
+}
+.c-nav__logo {
+  width: 95px;
+  height: auto;
+  @include media(md) {
+    width: 200px;
+    @include media(xxl) {
+      width: 350px;
+    }
+  }
+}
 
 .c-nav {
   position: fixed;
@@ -13,7 +32,7 @@
   height: 100%;
   background-color: $base-green;
   transform: translateX(100%);
-  transition: transform .3s linear;
+  transition: transform 0.3s linear;
   z-index: 200;
 
   @include media(md) {
@@ -70,10 +89,6 @@
   }
 }
 
-// .is-drawerActive .c-nav {
-//   transform: translateX(0);
-//   z-index: 1;
-// }
 .is-drawerActive {
   position: fixed;
   width: 100%;

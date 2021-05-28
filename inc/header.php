@@ -1,4 +1,9 @@
-<header class="l-header">
+<header class="l-header <?php if(!is_home()) : ?>l-header__sub<?php endif ; ?>">
+  <?php if (!is_home()) : ?>
+    <a href="<?= esc_url(home_url('/')) ?>" class="c-nav__logo-link">
+      <img class="c-nav__logo" src="<?= get_template_directory_uri(); ?>/images/logo.png" width="200" height="100" />
+    </a>
+  <?php endif; ?>
   <!--humburger menu-->
   <button type="button" id="js-buttonHamburger" class="c-button c-hamburger" aria-controls="global-nav" aria-expanded="false">
     <span class="c-hamburger__line">

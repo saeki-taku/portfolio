@@ -1,6 +1,15 @@
 .l-header {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
   @include media(md) {
-    padding: 20px 20px;
+    display: block;
+  }
+
+  &.l-header__sub {
+    justify-content: space-between;
+    @include media(md) {
+      display: block;
+    }
   }
 }
-
