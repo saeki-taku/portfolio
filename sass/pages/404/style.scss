@@ -1,4 +1,7 @@
-.c-404__icon {
+@import "../../Foundation/_color";
+@import "../../Foundation/_mixin";
+
+.p-404__icon {
   display: block;
   width: 70%;
   height: auto;
@@ -8,23 +11,24 @@
   }
 }
 
-.c-404__text {
+.p-404__text {
   letter-spacing: 2px;
   margin-bottom: 60px;
   @include media(md) {
     text-align: center;
   }
 }
-.c-404__link-box {
+.p-404__link-box {
   display: flex;
   justify-content: center;
 }
 
-.c-404__link {
+.p-404__link {
   display: inline-block;
   padding: 8px 16px;
   text-decoration: underline;
   &:hover {
-    opacity: .6;
+    opacity: 0.6;
+    color: $contact-link-hover;
   }
 }

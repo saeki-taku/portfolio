@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/*---------------------------------------------------
+ブレークポイント
+----------------------------------------------------*/
+/*---------------------------------------------------
+フォントサイズ
+----------------------------------------------------*/
+/*---------------------------------------------------
+アニメーション テンプレート
+----------------------------------------------------*/
+.p-404__icon {
+  display: block;
+  width: 70%;
+  height: auto;
+  margin: 0 auto 60px; }
+  @media (min-width: 768px) {
+    .p-404__icon {
+      width: 50%; } }
+
+.p-404__text {
+  letter-spacing: 2px;
+  margin-bottom: 60px; }
+  @media (min-width: 768px) {
+    .p-404__text {
+      text-align: center; } }
+
+.p-404__link-box {
+  display: flex;
+  justify-content: center; }
+
+.p-404__link {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: underline; }
+  .p-404__link:hover {
+    opacity: 0.6;
+    color: #178fff; }
+
+/*# sourceMappingURL=style.css.map */
