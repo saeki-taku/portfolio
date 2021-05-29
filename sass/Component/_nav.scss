@@ -1,6 +1,7 @@
 .c-nav__logo-link {
   width: 95px;
   height: auto;
+  transition: opacity .5s;
   @include media(md) {
     width: 200px;
     display: block;
@@ -10,6 +11,9 @@
       width: 350px;
       transform: translateX(0);
     }
+  }
+  &:hover {
+    opacity: .7;
   }
 }
 .c-nav__logo {
