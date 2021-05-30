@@ -31,9 +31,6 @@
   padding: 10px 4px;
 }
 
-.c-contact__item > textarea {
-}
-
 .c-contact__btn {
   display: block;
   font-weight: 400;
@@ -45,7 +42,7 @@
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: $base-white;
-  transition: background-color 0.2s ease;
+  transition: background-color .2s ease-in;
 
   &:hover {
     background-color: $base-green;

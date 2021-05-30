@@ -64,18 +64,17 @@
       <h2 class="c-section__title fade-in-trigger">ABOUT</h2>
       <img class="c-section__icon" src="<?= get_template_directory_uri(); ?>/images/about-color.png" alt="about-icon" width="250" height="250" />
       <div class="p-about__wrap">
-        <!-- <div class="p-about__inner"> -->
         <img class="p-about__face" src="<?= get_template_directory_uri(); ?>/images/face.jpg" alt="佐伯の顔写真" width="90" height="90" />
-        <div class="p-about__textBox">
-          <h3 class="p-about__myname">saeki takuya</h3>
-          <p class="p-about__text"><label for="text">在住:</label>東京都</p>
-          <p class="p-about__text">現在、コーダーを目指してweb制作を日々学習に励んでおります。</p>
-          <p class="p-about__text">
+        <div class="p-about__profile">
+          <h3 class="p-about__profile-myname">saeki takuya</h3>
+          <p class="p-about__profile-from"><label for="text">在住:</label>東京</p>
+        </div>
+        <div class="p-about__introduce">
+          <p class="p-about__introduce-text">現在、コーダーを目指してweb制作を日々学習に励んでおります。</p>
+          <p class="p-about__introduce-text">
             これまで営業・施術スタッフ(整骨院・リラクゼーション)・寄付活動など様々な職種に携わってきました。多様化が進む現在において数多く経験を活かすことで幅広く活動していきたいと思っております様々なジャンルにおいてweb制作として携わりたいと思っておりますのでどうぞ宜しくお願い致します。
           </p>
-          <!-- </div> -->
         </div>
-        <!-- <a class="c-more__button" href="">もっと見る？</a> -->
       </div>
     </section>
     <!-- contact -->

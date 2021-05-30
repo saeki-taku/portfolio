@@ -3,27 +3,58 @@
 }
 
 .p-about__wrap {
-  width: 90%;
-  display: flex;
   margin: 0 auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 90px 1fr;
+  grid-template-rows: minmax(90px, auto);
+  @include media(md) {
+    grid-gap: 20px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: minmax(auto, auto);
+  }
 }
 
 .p-about__face {
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  margin: 2px 15px 0 0;
+  // margin: 2px 15px 0 0;
+  width: 100%;
+  height: auto;
+  @include media(md) {
+    width: 200px;
+    grid-row: 1/3;
+  }
 }
-.p-about__textBox {
-  flex-shrink: 2;
+.p-about__profile {
+  @include media(md) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 }
 
-.p-about__myname {
+.p-about__profile-myname {
   margin-bottom: 12px;
   @include font-size-rem(24);
 }
 
-.p-about__text {
+.p-about__introduce {
+  margin-top: 10px;
+  grid-column: 1/3;
+  @include media(md) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+
+.p-about__introduce-text {
   @include font-size-rem(14);
-  line-height: 2;
+  line-height: 1.8;
   letter-spacing: 2px;
 }
+
+// display: grid;
+// grid-template-columns: 100px 100px;
+// grid-gap: 10px;
+// background-color: #fff;
+// color: #444;

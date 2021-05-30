@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>saeki's portfolio</title>
+
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/style.css" />
   <!-- ページによって読み込ませるcssを変える(スラッグを使用するか) ↓↓↓↓ -->
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/pages/work/style.css" />
