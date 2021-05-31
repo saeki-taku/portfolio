@@ -895,15 +895,19 @@ template {
     .c-work__list {
       grid-template-columns: 1fr 1fr 1fr; } }
 
+.c-work__item {
+  overflow: hidden;
+  border-radius: 8px; }
+
 .c-work__link {
   display: block;
   width: 100%;
   height: auto;
-  box-shadow: 12px 9px 20px 0px rgba(91, 100, 91, 0.6); }
+  box-shadow: 12px 9px 20px 0px rgba(91, 100, 91, 0.6);
+  transition: transform .2s ease-in; }
 
 .c-work__link > img {
   display: block;
-  border-radius: 8px;
   width: 100%;
   height: auto; }
 
@@ -911,34 +915,21 @@ template {
   position: relative;
   overflow: hidden;
   border-radius: 8px; }
-  .c-work__slidebg::before {
-    content: "詳しく見る";
-    display: block;
-    text-align: center;
-    letter-spacing: 2px;
-    color: #fff;
-    position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 10; }
-  .c-work__slidebg::after {
+  .c-work__slidebg:after {
     content: "";
     display: block;
     width: 100%;
-    height: 20%;
+    height: 1000%;
     background-image: linear-gradient(to right bottom, #979797d5 0%, rgba(0, 0, 0, 0.8) 100%);
+    opacity: 0;
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: translateY(101%);
-    transition: transform 0.2s ease-in-out; }
-  .c-work__slidebg:hover::before {
-    opacity: 1; }
-  .c-work__slidebg:hover:after {
-    transform: none; }
+    transition: opacity .3s; }
+  .c-work__slidebg:hover {
+    transform: scale(1.2); }
+    .c-work__slidebg:hover::after {
+      opacity: .6; }
 
 /*---------------------------------------------------
 ブレークポイント
