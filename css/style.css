@@ -904,7 +904,8 @@ template {
   width: 100%;
   height: auto;
   box-shadow: 12px 9px 20px 0px rgba(91, 100, 91, 0.6);
-  transition: transform .2s ease-in; }
+  transition: transform .2s ease-in;
+  overflow: hidden; }
 
 .c-work__link > img {
   display: block;
