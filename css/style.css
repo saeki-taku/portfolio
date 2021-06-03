@@ -496,10 +496,11 @@ template {
   border-bottom-right-radius: 30px;
   background-color: #fff;
   transition: background-color .2s ease-in; }
-  .c-contact__btn:hover {
-    background-color: #38AF77;
-    color: #fff;
-    border: 1px solid #fff; }
+  @media (min-width: 768px) {
+    .c-contact__btn:hover {
+      background-color: #38AF77;
+      color: #fff;
+      border: 1px solid #fff; } }
 
 .c-foot-menu__list {
   display: flex;
@@ -546,7 +547,7 @@ template {
   box-shadow: 0 0 2rem transparent;
   outline: none;
   transition: all 0.3s ease-in-out; }
-  .c-hamburger:hover, .c-hamburger:focus {
+  .c-hamburger:hover {
     box-shadow: 0 0 0.5rem #38AF77; }
 
 .c-hamburger__line {
@@ -763,8 +764,8 @@ template {
 .fade-in {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   -webkit-animation-delay: 0s;
@@ -780,7 +781,7 @@ template {
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px); }
+    transform: translateY(-30px); }
   to {
     opacity: 1;
     transform: translateY(0); } }
@@ -788,7 +789,7 @@ template {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px); }
+    transform: translateY(-30px); }
   to {
     opacity: 1;
     transform: translateY(0); } }
@@ -897,15 +898,15 @@ template {
 
 .c-work__item {
   overflow: hidden;
-  border-radius: 8px; }
+  border-radius: 8px;
+  z-index: 1; }
 
 .c-work__link {
   display: block;
   width: 100%;
   height: auto;
   box-shadow: 12px 9px 20px 0px rgba(91, 100, 91, 0.6);
-  transition: transform .2s ease-in;
-  overflow: hidden; }
+  transition: transform 0.2s ease-in; }
 
 .c-work__link > img {
   display: block;
@@ -915,7 +916,8 @@ template {
 .c-work__slidebg {
   position: relative;
   overflow: hidden;
-  border-radius: 8px; }
+  border-radius: 8px;
+  z-index: 1; }
   .c-work__slidebg:after {
     content: "";
     display: block;
@@ -926,11 +928,11 @@ template {
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: opacity .3s; }
+    transition: opacity 0.3s; }
   .c-work__slidebg:hover {
     transform: scale(1.2); }
     .c-work__slidebg:hover::after {
-      opacity: .6; }
+      opacity: 0.6; }
 
 /*---------------------------------------------------
 ブレークポイント

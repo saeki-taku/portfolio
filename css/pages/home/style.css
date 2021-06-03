@@ -121,6 +121,8 @@ hero__icon
       height: 360px; } }
   .p-hero__icon.wind {
     visibility: hidden; }
+  .p-hero__icon.leaf {
+    opacity: 0; }
 
 .leaf-animation {
   opacity: 0;

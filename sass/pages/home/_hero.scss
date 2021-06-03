@@ -92,6 +92,9 @@ hero__icon
   &.wind {
     visibility: hidden;
   }
+  &.leaf {
+    opacity: 0;
+  }
 }
 
 .leaf-animation {
