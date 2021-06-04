@@ -46,11 +46,13 @@ const titleAnimation = function() {
 
 const windAnimation = function() {
   return new Promise(function(resolve) {
+    const wind = document.querySelector(".wind");
+    wind.src = path + "/images/hero-flow.png?" + new Date().getTime();
+
     setTimeout(function() {
-      const wind = document.querySelector(".wind");
       wind.style.visibility = "visible";
       resolve();
-    }, 800);
+    }, 700);
   });
 };
 

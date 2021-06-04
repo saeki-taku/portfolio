@@ -12,7 +12,7 @@
   font-weight: bold;
   color: red; }
 
-.c-contact__label.comfirm__label {
+.c-contact__label.confirm__label {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.5); }
 
 .example {
@@ -28,6 +28,18 @@
   color: rgba(0, 0, 0, 0.5);
   text-decoration: underline; }
   .p-contact__btn-back:hover {
+    color: #178fff; }
+
+.p-contact-complete {
+  display: flex;
+  justify-content: center; }
+
+.p-contact-complete__btn {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: underline; }
+  .p-contact-complete__btn:hover {
+    opacity: 0.6;
     color: #178fff; }
 
 /*# sourceMappingURL=style.css.map */

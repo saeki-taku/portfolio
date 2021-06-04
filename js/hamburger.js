@@ -25,14 +25,4 @@
     }
   });
   var test = $('.c-button').attr('aria-expanded');
-  console.log(test); // let testclick = function () {
-  //   $('body').toggleClass('is-drawerActive');
-  //   if ($(this).attr('aria-expanded') == 'false') {
-  //     $(this).attr('aria-expanded', true);
-  //   } else {
-  //     $(this).attr('aria-expanded', false);
-  //   }
-  // };
-  // $('#js-buttonHamburger').click(testclick());
-  // $('#js-page-scroll__head a[href*="#"]').click.testclick();
 })();

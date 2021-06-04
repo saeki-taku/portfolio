@@ -15,8 +15,8 @@
       <h1 class="p-slide-in__inner">saeki's<br /><span>portfolio</span></h1>
     </div>
     <div class="p-hero__icon-wind">
-      <!-- <jsよりleafのimgが入る> -->
-      <img class="p-hero__icon wind" src="<?= get_template_directory_uri(); ?>/images/hero-flow.png?<?= date("YmdHis");?>" alt="top-icon" width="300" height="180" />
+      <!-- <jsよりwindのimgが入る> -->
+      <img class="p-hero__icon wind" id="wind" src="<?= get_template_directory_uri(); ?>/images/hero-flow.png" alt="top-icon" width="300" height="180" />
     </div>
     <div class="p-hero__icon-leaf">
       <!-- <jsよりleafのimgが入る> -->
@@ -84,7 +84,6 @@
       <div class="c-contact__form">
 
         <?= do_shortcode('[mwform_formkey key="5"]'); ?>
-
 
         <div>
     </section>

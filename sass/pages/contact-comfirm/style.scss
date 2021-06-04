@@ -1,5 +1,5 @@
-@import '../../Foundation/_color';
-@import '../../Foundation/_mixin';
+@import "../../Foundation/_color";
+@import "../../Foundation/_mixin";
 
 // ==========================================================================
 // MW WP Form (comfirm)
@@ -11,7 +11,7 @@
 }
 
 .c-contact__label {
-  &.comfirm__label {
+  &.confirm__label {
     border-bottom: 1px dashed $base-black-thin;
   }
 }
@@ -31,6 +31,23 @@
   text-decoration: underline;
 
   &:hover {
+    color: $contact-link-hover;
+  }
+}
+
+// conatct-complete
+
+.p-contact-complete {
+  display: flex;
+  justify-content: center;
+}
+
+.p-contact-complete__btn {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: underline;
+  &:hover {
+    opacity: 0.6;
     color: $contact-link-hover;
   }
 }
