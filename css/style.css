@@ -502,20 +502,56 @@ template {
       color: #fff;
       border: 1px solid #fff; } }
 
+.fade-down {
+  -webkit-animation-name: fadeDown;
+          animation-name: fadeDown;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0; }
+
+@-webkit-keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
 .c-foot-menu__list {
   display: flex;
   justify-content: center;
   margin-bottom: 20px; }
 
-.c-foot-menu__item:not(:last-of-type)::after {
-  content: "/";
-  display: inline-block; }
+.c-foot-menu__item {
+  word-wrap: break-word; }
+  .c-foot-menu__item:not(:last-of-type)::after {
+    content: "/";
+    display: inline; }
 
 .c-foot-menu__link {
   font-size: 3.2vw;
-  padding: 8px 10px;
+  padding: 8px 6px;
   color: rgba(0, 0, 0, 0.5);
-  transition: color 0.3s ease-in, border-bottom 0.2s ease-in; }
+  transition: color 0.3s ease-in, border-bottom 0.2s ease-in;
+  word-wrap: break-word; }
   @media (min-width: 960px) {
     .c-foot-menu__link {
       font-size: 1.5rem;
@@ -533,7 +569,7 @@ template {
           appearance: none;
   border: none;
   background-color: transparent;
-  z-index: 10; }
+  z-index: 201; }
   @media (min-width: 768px) {
     .c-button {
       display: none; } }
@@ -693,7 +729,7 @@ template {
       position: static; } }
   .is-drawerActive .c-nav {
     transform: translateX(0);
-    z-index: 1; }
+    z-index: 200; }
 
 .loading {
   display: flex;
@@ -760,42 +796,6 @@ template {
     .c-section__title {
       font-size: 3.75rem;
       letter-spacing: 4px; } }
-
-.fade-in {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-  -webkit-animation-duration: 0.9s;
-          animation-duration: 0.9s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0; }
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-30px); }
-  to {
-    opacity: 1;
-    transform: translateY(0); } }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-30px); }
-  to {
-    opacity: 1;
-    transform: translateY(0); } }
-
-.fadeUpTrigger {
-  opacity: 0; }
 
 .c-section__icon {
   margin: 0 auto 40px;
@@ -899,7 +899,8 @@ template {
 .c-work__item {
   overflow: hidden;
   border-radius: 8px;
-  z-index: 1; }
+  z-index: 1;
+  opacity: 0; }
 
 .c-work__link {
   display: block;
@@ -918,21 +919,39 @@ template {
   overflow: hidden;
   border-radius: 8px;
   z-index: 1; }
-  .c-work__slidebg:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1000%;
-    background-image: linear-gradient(to right bottom, #979797d5 0%, rgba(0, 0, 0, 0.8) 100%);
-    opacity: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: opacity 0.3s; }
-  .c-work__slidebg:hover {
-    transform: scale(1.2); }
-    .c-work__slidebg:hover::after {
-      opacity: 0.6; }
+  @media (min-width: 768px) {
+    .c-work__slidebg::before {
+      content: "詳しく見る";
+      display: block;
+      text-align: center;
+      letter-spacing: 2px;
+      color: #fff;
+      position: absolute;
+      bottom: 20px;
+      right: -15px;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+      z-index: 10; }
+    .c-work__slidebg::after {
+      content: "";
+      display: block;
+      width: 160px;
+      height: 160px;
+      border-radius: 100% 0 0 0;
+      background-color: #38AF77;
+      opacity: 0.9;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateX(101%);
+      transition: transform 0.2s ease-in-out; }
+    .c-work__slidebg:hover {
+      transform: scale(1.1); }
+      .c-work__slidebg:hover::before {
+        opacity: 1; }
+      .c-work__slidebg:hover:after {
+        transform: none; } }
 
 /*---------------------------------------------------
 ブレークポイント

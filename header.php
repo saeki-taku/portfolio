@@ -18,13 +18,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Neucha&family=Poiret+One&display=swap" rel="stylesheet" />
   <script>const path = "<?= get_template_directory_uri();?>";</script>
   <script src="<?= get_template_directory_uri(); ?>/js/jquery-3.6.0min.js" defer></script>
+  <?php if (is_home()) : ?>
   <script src="<?= get_template_directory_uri(); ?>/js/hero.js"></script>
+  <script src="<?= get_template_directory_uri(); ?>/js/slide-in.js" defer></script>
+  <?php endif ;?>
   <script src="<?= get_template_directory_uri(); ?>/js/loading.js"></script>
   <script src="<?= get_template_directory_uri(); ?>/js/main.js" defer></script>
   <script src="<?= get_template_directory_uri(); ?>/js/hamburger.js" defer></script>
   <script src="<?= get_template_directory_uri(); ?>/js/page-scroll.js" defer></script>
-  <script src="<?= get_template_directory_uri(); ?>/js/fade-in.js" defer></script>
-  <script src="<?= get_template_directory_uri(); ?>/js/slide-in.js" defer></script>
+  <script src="<?= get_template_directory_uri(); ?>/js/fade-animation.js" defer></script>
 
   <?php wp_head(); ?>
 

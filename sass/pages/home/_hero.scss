@@ -17,7 +17,6 @@
 
   @include media(md) {
     top: calc(50% - 90px);
-    // left: calc(50% - 20px);
     @include font-size-rem(60);
   }
 }
@@ -80,12 +79,15 @@ hero__icon
 
 .p-hero__icon {
   // image-rendering: -webkit-optimize-contrast;
+  max-width: 320px;
+  width: 95%;
+  height: auto;
   position: absolute;
-  top: calc(50% + 50px);
+  top: calc(50% + 30px);
   left: calc(50% + 20px);
   transform: translate(-50%, -50%);
-  // z-index: 10;
   @include media(md) {
+    max-width: 100%;
     width: 600px;
     height: 360px;
   }

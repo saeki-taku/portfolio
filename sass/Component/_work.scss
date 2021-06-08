@@ -16,6 +16,7 @@
   overflow: hidden;
   border-radius: 8px;
   z-index: 1;
+  opacity: 0;
 }
 
 .c-work__link {
@@ -41,59 +42,46 @@
   border-radius: 8px;
   z-index: 1;
 
-  &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1000%;
-    background-image: $work-slidecover;
-    opacity: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: opacity 0.3s;
-    // border-radius: 8px;
-  }
-
-  // &::before {
-  //   content: "詳しく見る";
-  //   display: block;
-  //   text-align: center;
-  //   letter-spacing: 2px;
-  //   color: $base-white;
-  //   position: absolute;
-  //   bottom: 3%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   opacity: 0;
-  //   transition: opacity 0.5s ease-in-out;
-  //   z-index: 10;
-  // }
-
-  // &::after {
-  //   content: "";
-  //   display: block;
-  //   width: 100%;
-  //   height: 20%;
-  //   background-image: $work-slidecover;
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   transform: translateY(101%);
-  //   transition: transform 0.2s ease-in-out;
-  // }
-
-  &:hover {
-    transform: scale(1.2);
+  @include media(md) {
+    &::before {
+      content: "詳しく見る";
+      display: block;
+      text-align: center;
+      letter-spacing: 2px;
+      color: $base-white;
+      position: absolute;
+      bottom: 20px;
+      right: -15px;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+      z-index: 10;
+    }
 
     &::after {
-      opacity: 0.6;
+      content: "";
+      display: block;
+      width: 160px;
+      height: 160px;
+      border-radius: 100% 0 0 0;
+      background-color: $base-green;
+      opacity: 0.9;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateX(101%);
+      transition: transform 0.2s ease-in-out;
     }
-    // &::before {
-    //   opacity: 1;
-    // }
-    // &:after {
-    //   transform: none;
-    // }
+
+    &:hover {
+      transform: scale(1.1);
+
+      &::before {
+        opacity: 1;
+      }
+      &:after {
+        transform: none;
+      }
+    }
   }
 }

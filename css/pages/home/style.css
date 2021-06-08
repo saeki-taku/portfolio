@@ -112,12 +112,16 @@
 hero__icon
 ----------------------------------------------------*/
 .p-hero__icon {
+  max-width: 320px;
+  width: 95%;
+  height: auto;
   position: absolute;
-  top: calc(50% + 50px);
+  top: calc(50% + 30px);
   left: calc(50% + 20px);
   transform: translate(-50%, -50%); }
   @media (min-width: 768px) {
     .p-hero__icon {
+      max-width: 100%;
       width: 600px;
       height: 360px; } }
   .p-hero__icon.wind {
