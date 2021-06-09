@@ -14,7 +14,7 @@
 				<?php while (have_posts()) : the_post(); ?>
 					<?php $ID = get_the_ID(); ?>
 					<?php $title = get_the_title($ID); ?>
-					<li class="c-work__item js-fade-down-trigger">
+					<li class="c-workAll__item js-fade-down-trigger">
 						<div class="p-work-all__box">
 							<a class="c-work__link c-work__slidebg test2" href="<?php the_permalink(); ?>">
 								<?php the_post_thumbnail(array(600, 400), array('alt' => $title)); ?>

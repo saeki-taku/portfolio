@@ -20,6 +20,12 @@
   overflow: hidden;
   border-radius: 8px; }
 
+.c-workAll__item {
+  overflow: hidden;
+  border-radius: 8px;
+  z-index: 1;
+  opacity: 0; }
+
 .p-work-detail {
   padding: 100px 20px 60px;
   max-width: 960px;
