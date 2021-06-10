@@ -460,10 +460,12 @@ template {
 
 .c-contact__form {
   margin: 0 auto;
-  max-width: 300px; }
+  max-width: 300px;
+  width: 90%; }
   @media (min-width: 768px) {
     .c-contact__form {
-      max-width: 450px; } }
+      max-width: 450px;
+      width: 100%; } }
 
 .c-contact__label {
   display: block;
@@ -495,7 +497,7 @@ template {
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: #fff;
-  transition: background-color .2s ease-in; }
+  transition: background-color 0.2s ease-in; }
   @media (min-width: 768px) {
     .c-contact__btn:hover {
       background-color: #38AF77;
@@ -559,6 +561,28 @@ template {
   .c-foot-menu__link:hover {
     color: #38AF77;
     border-bottom: 2px dashed; }
+
+.copyright {
+  font-size: 0.75rem; }
+  @media (min-width: 768px) {
+    .copyright {
+      font-size: 1rem; } }
+
+/*---------------------------------------------------
+SNSアイコン
+----------------------------------------------------*/
+.c-sns__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; }
+
+.c-sns__item:not(:last-of-type) {
+  margin-right: 20px; }
+
+@media (min-width: 768px) {
+  .c-sns__link > img {
+    width: 35px;
+    height: 35px; } }
 
 .c-button {
   position: relative;

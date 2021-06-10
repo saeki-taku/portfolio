@@ -852,7 +852,7 @@ textarea {
 
 .gallery-columns-5 {
 	grid-template-columns: repeat(5, 1fr);
-}
+}zzz
 
 .gallery-columns-6 {
 	grid-template-columns: repeat(6, 1fr);

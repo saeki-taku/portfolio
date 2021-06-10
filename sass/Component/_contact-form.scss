@@ -1,9 +1,11 @@
 .c-contact__form {
   margin: 0 auto;
   max-width: 300px;
+  width: 90%;
 
   @include media(md) {
     max-width: 450px;
+    width: 100%;
   }
 }
 
@@ -42,7 +44,7 @@
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: $base-white;
-  transition: background-color .2s ease-in;
+  transition: background-color 0.2s ease-in;
 
   @include media(md) {
     &:hover {
@@ -52,4 +54,3 @@
     }
   }
 }
-

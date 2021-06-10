@@ -13,5 +13,13 @@
       <li class="c-foot-menu__item"><a href="<?= esc_url(home_url('/')) ?>#js-contact__anchor" class="c-foot-menu__link">CONTACT</a></li>
     <?php endif; ?>
   </ul>
+  <ul class="c-sns__list">
+    <li class="c-sns__item">
+      <a href="https://github.com/saeki-taku" class="c-sns__link" target="brank"><img src="<?= get_template_directory_uri(); ?>/images/sns-github_icon.png" alt="githubアイコン" width="25" height="25"></a>
+    </li>
+    <li class="c-sns__item">
+      <a href="https://codepen.io/saeki-taku" class="c-sns__link" target="brank"><img src="<?= get_template_directory_uri(); ?>/images/sns-codepen_icon.png" alt="codepenアイコン" width="25" height="25"></a>
+    </li>
+  </ul>
   <p class="copyright">Copyright &#169; 2021 saeki's portfolio</p>
 </footer>

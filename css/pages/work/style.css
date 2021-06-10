@@ -18,9 +18,10 @@
 
 .p-work-all__box {
   overflow: hidden;
-  border-radius: 8px; }
+  border-radius: 8px;
+  z-index: 1; }
 
-.c-workAll__item {
+.p-work-all__item {
   overflow: hidden;
   border-radius: 8px;
   z-index: 1;

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="saeki_takuyaのポートフォリオになります。これまで制作したものも載せていますので是非、覗いてみて行ってください！" />
 
   <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/style.css" />
   <!-- ページによって読み込ませるcssを変える(スラッグを使用するか) ↓↓↓↓ -->
