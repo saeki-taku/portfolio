@@ -18,7 +18,6 @@
 .p-about__face {
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  // margin: 2px 15px 0 0;
   width: 100%;
   height: auto;
   @include media(md) {
@@ -52,9 +51,3 @@
   line-height: 1.8;
   letter-spacing: 2px;
 }
-
-// display: grid;
-// grid-template-columns: 100px 100px;
-// grid-gap: 10px;
-// background-color: #fff;
-// color: #444;

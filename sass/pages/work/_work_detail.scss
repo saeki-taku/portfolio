@@ -1,19 +1,27 @@
 .p-work-detail {
-  padding: 100px 20px 80px;
   max-width: 960px;
   margin: 0 auto;
+  padding: 80px 20px 80px;
+  @include media(md) {
+    padding: 100px 20px 80px;
+  }
 }
 
 .p-work-detail__title {
+  border-left: 6px solid $base-green;
+  font-weight: 500;
   margin-bottom: 20px;
   padding-left: 8px;
-  border-left: 6px solid $base-green;
+  @include font-size-rem(18);
+  @include media(md) {
+    @include font-size-rem(34);
+  }
 }
 
 .p-work-detail__site-topImg {
-  width: 100%;
-  height: auto;
   margin-bottom: 60px;
+  height: auto;
+  width: 100%;
 }
 
 .p-work-detail__wrap {
@@ -25,23 +33,27 @@
 }
 
 .p-work-detail__site-allImg {
-  width: 100%;
+  margin-bottom: 40px;
   height: auto;
-  margin-bottom: 30px;
+  width: 100%;
   @include media(md) {
   }
 }
 
 .p-work-detail__link {
+  @include font-size-rem(12);
+  @include media(sm) {
+    @include font-size-rem(16);
+  }
   & a {
+    color: $base-white;
     display: block;
     background-color: $base-green;
-    margin-bottom: 30px;
-    padding: 8px;
     border-radius: 8px;
-    text-align: center;
-    color: $base-white;
+    margin-bottom: 30px;
     letter-spacing: 2px;
+    padding: 8px;
+    text-align: center;
     transition: background-color 0.2s ease-in;
 
     @include media(md) {
@@ -56,9 +68,8 @@
   }
 }
 
-.p-work-detail__text-title {
+.p-work-detail__text-box {
   word-break: break-all;
-  border-bottom: 1px solid;
   @include font-size-rem(12);
   @include media(sm) {
     @include font-size-rem(16);
@@ -66,4 +77,23 @@
   &:not(:last-of-type) {
     margin-bottom: 30px;
   }
+}
+
+.p-work-detail__comment {
+  margin-bottom: 30px;
+  @include font-size-rem(12);
+  @include media(sm) {
+    @include font-size-rem(16);
+  }
+}
+
+.p-work-detail__text-title {
+  border-bottom: 3px solid rgba(124, 124, 124, 0.2);
+  margin-bottom: 8px;
+  padding-bottom: 3px;
+}
+
+.p-work-detail__text-contents {
+  word-break: break-all;
+  line-height: 1.5;
 }
