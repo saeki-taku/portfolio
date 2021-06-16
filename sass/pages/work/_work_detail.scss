@@ -36,12 +36,13 @@
   margin-bottom: 40px;
   height: auto;
   width: 100%;
+  box-shadow: 2px 2px 8px 0px rgba(91, 100, 90, 0.5);
   @include media(md) {
   }
 }
 
 .p-work-detail__link {
-  @include font-size-rem(12);
+  @include font-size-rem(14);
   @include media(sm) {
     @include font-size-rem(16);
   }
@@ -70,7 +71,7 @@
 
 .p-work-detail__text-box {
   word-break: break-all;
-  @include font-size-rem(12);
+  @include font-size-rem(14);
   @include media(sm) {
     @include font-size-rem(16);
   }
@@ -80,8 +81,9 @@
 }
 
 .p-work-detail__comment {
+  line-height: 1.5;
   margin-bottom: 30px;
-  @include font-size-rem(12);
+  @include font-size-rem(14);
   @include media(sm) {
     @include font-size-rem(16);
   }

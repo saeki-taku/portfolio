@@ -2,7 +2,7 @@
 
 function fadeDown() {
   $(".js-fade-down-trigger").each(function() {
-    var elementPos = $(this).offset().top - 180;
+    var elementPos = $(this).offset().top + 50;
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
 
@@ -48,7 +48,7 @@ function workFadeAnimation() {
   }
 }
 
-$(window).scroll(function() {
+$(window).on('load scroll', function() {
   fadeDown();
   workFadeAnimation();
 });

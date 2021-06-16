@@ -19,7 +19,8 @@
 .p-work-all__box {
   overflow: hidden;
   border-radius: 8px;
-  z-index: 1; }
+  z-index: 1;
+  border: solid 2px rgba(112, 107, 107, 0.1); }
 
 .p-work-all__item {
   overflow: hidden;
@@ -60,10 +61,11 @@
 .p-work-detail__site-allImg {
   margin-bottom: 40px;
   height: auto;
-  width: 100%; }
+  width: 100%;
+  box-shadow: 2px 2px 8px 0px rgba(91, 100, 90, 0.5); }
 
 .p-work-detail__link {
-  font-size: 0.75rem; }
+  font-size: 0.875rem; }
   @media (min-width: 576px) {
     .p-work-detail__link {
       font-size: 1rem; } }
@@ -87,7 +89,7 @@
 
 .p-work-detail__text-box {
   word-break: break-all;
-  font-size: 0.75rem; }
+  font-size: 0.875rem; }
   @media (min-width: 576px) {
     .p-work-detail__text-box {
       font-size: 1rem; } }
@@ -95,8 +97,9 @@
     margin-bottom: 30px; }
 
 .p-work-detail__comment {
+  line-height: 1.5;
   margin-bottom: 30px;
-  font-size: 0.75rem; }
+  font-size: 0.875rem; }
   @media (min-width: 576px) {
     .p-work-detail__comment {
       font-size: 1rem; } }
